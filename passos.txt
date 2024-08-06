@@ -1,0 +1,6 @@
+1 - Pedir para o usuário escolher o local para criar o projeto
+2 - Pedir para o usuário entrar com o nome do projeto
+3 - Criar o diretório com o nome do projeto
+4 - Criar os subdiretórios
+5 - Se o nome do projeto já existir, imprima uma mensagem para o usuário dizendo que este já existe e continua perguntando o nome do projeto
+6 - Finalize mostrando uma mensagem de sucesso
