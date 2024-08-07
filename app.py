@@ -19,17 +19,32 @@ def create_directories(base_dir, directories):
 
 def main():
 
-    base_directory = choose_directory()
+    while True:
 
-    if base_directory:
-        directories_to_create = [
-            'dwg',
-            'entregas',
-            'dados de campo',
-            'entregas'
-        ]
+        base_directory = choose_directory()
 
-    create_directories(base_directory, directories_to_create)
+        if not base_directory:
+            print('Nenhum diretório selecionado, encerrando...')
+            return
+
+        project_name = input('Digite o nome do projeto: ')
+        project_directory = os.path.join(base_directory, project_name)
+
+
+        if not os.path.exists(project_directory):
+            directories_to_create = [
+                'dwg',
+                'entregas',
+                'dados de campo',
+                'dados de projeto'
+            ]
+            create_directories(project_directory, directories_to_create)
+            print(f'Projeto criado no diretório: {project_directory}')
+            break
+
+        else:
+            print(f'O diretório do projeto {base_directory} já existe. Por favor selecione outro diretório')
+
 
 if __name__ == '__main__':
     main()
