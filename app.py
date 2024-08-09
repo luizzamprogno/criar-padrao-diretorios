@@ -45,6 +45,5 @@ def main():
         else:
             print(f'O diretório do projeto {base_directory} já existe. Por favor selecione outro diretório')
 
-
 if __name__ == '__main__':
     main()
